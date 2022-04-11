@@ -292,7 +292,7 @@ footer nav div a:hover{
     color: black;
 }
 
-@media (max-width:375px){
+@media (max-width:425px){
     header nav{
         display: none;
     }
@@ -321,9 +321,10 @@ footer nav div a:hover{
     
     .aboutus-section-list div:nth-child(2) p:nth-child(1){
         text-align: center;
+        margin-left: -16px;
     }
     .aboutus-section-list div:nth-child(3) p:nth-child(1){
-        text-align: right;
+        margin-left: 53px;
     }
     .aboutus-section-list div p:nth-child(1){
         background-color:var(--rojo-palido);
