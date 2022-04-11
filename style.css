@@ -292,7 +292,7 @@ footer nav div a:hover{
     color: black;
 }
 
-@media (max-width:425px){
+@media (max-width:500px){
     header nav{
         display: none;
     }
