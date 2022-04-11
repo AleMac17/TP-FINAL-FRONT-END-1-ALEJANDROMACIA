@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+/*### Primario
+
+Rojo brillante: rgb (242, 95, 58)
+Azul oscuro: rgb (35, 44, 81)
+
+### Neutro
+
+Azul grisáceo oscuro: rgb (143, 148, 167)
+Azul muy oscuro: rgb (29, 30, 37)
+Rojo muy pálido: rgb (255, 239, 234)
+Variante gris claro: rgb (249, 249, 249)*/
+:root{
+    /*Primarios*/
+    --rojo: rgb(242,95,58);
+    --azul: rgb(35,44,81);
+    /*Secundarios*/
+    --azul-gris: rgb(143,148,167);
+    --azul-oscuro: rgb(29,30,37);
+    --rojo-palido: rgb(255,239,234);
+    --gris: rgb(249,249,249);
+    /*Font Size*/
+    --h1: 2.5rem;
+    --h2: 2rem;
+    --p: 1rem;
+}
+h2{
+    font-weight: 700;
+    font-size: var(--h2);
+    color: var(--azul);
+}
+
+*{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0vh 10vw 5vh;
+    padding-top: 1vh;
+}
+
+header nav a{
+    color:var(--azul) ;
+    text-decoration: none;
+    margin: 0 1vw 0 1vw;
+    font-weight: 500;
+    transition: all 500ms;
+}
+header nav a:hover{
+    border-bottom: 2px solid var(--azul-oscuro);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+button{
+    background-color: var(--rojo);
+    color: #ffffff;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    transition: all 1000ms;
+}
+button:hover{
+    background-color: #ffffff;
+    color: var(--rojo);
+    font-weight: 700;
+    border: 0.5px solid var(--rojo);
+}
+
+
+#img-mobile{
+    display: none;
+}
+.land-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 11vh 10vw;
+
+}
+.land-section-landingdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 8vh;
+    width: 30vw;
+}
+.land-section-landingdiv h1{
+    font-weight: 700;
+    font-size: var(--h1);
+    color: var(--azul);
+    line-height: 130%;
+}
+.land-section-landingdiv p{
+    font-weight: 500;
+    line-height: 160%;
+    margin-bottom: 3vh;
+    font-size: var(--p);
+}
+
+.aboutus-section{
+    display: flex;
+    margin: 4vh 10vw 15vh;
+    gap: 12vw;
+}
+
+.aboutus-section-description h2{
+    line-height: 130%;
+}
+
+.aboutus-section-description p{
+    font-weight: 500;
+    font-size: var(--p);
+    color: black;
+    line-height: 160%;
+}
+.aboutus-section-list div::before{
+    position: relative;
+    top: 35px;
+    right: 85px;
+    content: "01";
+    color: #ffffff ;
+    background-color: var(--rojo);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+}
+.aboutus-section-list div:nth-child(1)::before{
+    content: "01";
+}
+.aboutus-section-list div:nth-child(2)::before{
+    content: "02";
+}
+.aboutus-section-list div:nth-child(3)::before{
+    content: "03";
+}
+.aboutus-section-list div p:nth-child(1){
+    color: var(--azul);
+    font-weight: 700;
+
+}
+.aboutus-section-list div p:nth-child(2){
+    color: var(--azul-gris);
+    font-weight: 500;
+    line-height: 190%;
+}
+
+.team-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 1vw 0vh;
+}
+.team-section-avatar{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    margin-top: 5.5vh;
+}
+.team-section-avatar div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gris);
+}
+.team-section-avatar div img{
+    width: 6rem;
+    position: relative;
+    top: -5.5vh;
+    transition: all 1000ms;
+}
+.team-section-avatar div img:hover{
+    width: 6.5rem;
+}
+.team-section-avatar div span{
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--azul);
+    padding-top: -10px;
+    margin-top: -3vh;
+}
+.team-section-avatar div p{
+    color: var(--azul-gris);
+    font-weight: 500;
+    line-height: 175%;
+}
+.team-section button{
+    margin-top: 4vh;
+}
+.call-section{
+    background-color: var(--rojo);
+    display: flex;
+    height: 28vh;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 28vh;
+    padding: 0 10vw;
+}
+.call-section h2{
+    color: white;
+    word-break: break-word;
+    width: 28%;
+}
+.call-section button{
+    background-color: white;
+    color: var(--rojo);
+    font-weight: 500;
+}
+footer{
+    background-color: var(--azul-oscuro);
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    align-items:stretch;
+    padding: 10vh 10vw;
+}
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12vh;
+}
+.footer-logo-social{
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+}
+.footer-logo-social a img{
+    transition: width 1000ms, transform 1000ms,  position 1000ms, bottom 1000ms;
+}
+.footer-logo-social a img:hover{
+    width: 130%;
+    transform: rotate(12deg);
+    position: relative;
+    bottom: 10px;
+    filter: invert(39%) sepia(84%) saturate(888%) hue-rotate(336deg) brightness(100%) contrast(90%);
+
+}
+footer nav{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+footer nav div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2.5vh;
+}
+footer nav div a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1vh;
+}
+footer nav div a:hover{
+    font-weight: 500;
+    color: var(--rojo);
+}
+.footer-div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12vh;
+}
+.footer-div3 span{
+    color: var(--azul-gris);
+    font-size: 0.8rem;
+}
+.button{
+    background-color: var(--rojo);
+    color: #ffffff;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+}
+#input{
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    color: var(--azul-gris);
+    background-color: #ffffff;
+}
+#input:focus{
+    color: black;
+}
+
+@media (max-width:375px){
+    header nav{
+        display: none;
+    }
+    header button{
+        display: none;
+    }
+    #img-mobile{
+        display: flex;
+    }
+
+    .land-section{
+        flex-direction: column-reverse;
+    }
+    .land-section-landingdiv{
+        align-items: center;
+        text-align: center;
+        width: auto;
+    }
+    .aboutus-section{
+        flex-direction: column;
+        margin: 4vh 1vw 15vh;
+    }
+    .aboutus-section-description{
+        text-align: center;
+    }
+    
+    .aboutus-section-list div:nth-child(2) p:nth-child(1){
+        text-align: center;
+    }
+    .aboutus-section-list div:nth-child(3) p:nth-child(1){
+        text-align: right;
+    }
+    .aboutus-section-list div p:nth-child(1){
+        background-color:var(--rojo-palido);
+        padding: 16px 0px;
+        margin-left: 20px;
+        text-align: center;
+    }
+    .aboutus-section-list div p:nth-child(3){
+        background-color:var(--rojo-palido);
+        padding: 16px 0px;
+        margin-left: 20px;
+        text-align: center;
+    }
+    .aboutus-section-list div::before{
+        right: 0;
+        top:50px
+    }
+    .call-section{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 3vh;
+    }
+    .call-section h2{
+        color: white;
+        word-break: normal;
+        text-align: center;
+        width: auto;
+    }
+    #team-section-avatar-1{
+        display: none;
+    }
+    #team-section-avatar-3{
+        display: none;
+    }
+    footer{
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 10vh 0;
+        gap: 10vh;
+    }
+    footer nav {
+        gap: 11vw;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    footer span{
+        display: none;
+    }
+    .footer-input{
+        flex-direction: row;
+    }
+    .footer-logo div{
+        order: 1;
+        display: flex;
+        gap: 7vw;
+    }
+    .footer-logo img{
+        width: 15rem;
+    }
+    .footer-logo div a img{
+        width: 2.1rem;
+    }
+    .footer-logo div a img:hover{
+        width:  2.1rem; ;
+    }
+    .footer-logo img{
+        order: 2;
+    }
+}
+    
