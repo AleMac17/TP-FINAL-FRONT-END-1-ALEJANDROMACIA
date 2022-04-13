@@ -24,14 +24,13 @@ Variante gris claro: rgb (249, 249, 249)*/
     --h2: 2rem;
     --p: 1rem;
 }
+*{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
 h2{
     font-weight: 700;
     font-size: var(--h2);
     color: var(--azul);
-}
-
-*{
-    font-family: 'Be Vietnam Pro', sans-serif;
 }
 header{
     display: flex;
@@ -40,7 +39,6 @@ header{
     margin: 0vh 10vw 5vh;
     padding-top: 1vh;
 }
-
 header nav a{
     color:var(--azul) ;
     text-decoration: none;
@@ -53,7 +51,6 @@ header nav a:hover{
     font-size: 1.1rem;
     font-weight: 500;
 }
-
 button{
     background-color: var(--rojo);
     color: #ffffff;
@@ -69,16 +66,13 @@ button:hover{
     font-weight: 700;
     border: 0.5px solid var(--rojo);
 }
-
-
-#img-mobile{
+#mobile{
     display: none;
 }
 .land-section{
     display: flex;
     justify-content: space-between;
-    margin: 11vh 10vw;
-
+    margin: 12.5vh 10vw;
 }
 .land-section-landingdiv{
     display: flex;
@@ -99,17 +93,14 @@ button:hover{
     margin-bottom: 3vh;
     font-size: var(--p);
 }
-
 .aboutus-section{
     display: flex;
     margin: 4vh 10vw 15vh;
     gap: 12vw;
 }
-
 .aboutus-section-description h2{
     line-height: 130%;
 }
-
 .aboutus-section-description p{
     font-weight: 500;
     font-size: var(--p);
@@ -140,14 +131,12 @@ button:hover{
 .aboutus-section-list div p:nth-child(1){
     color: var(--azul);
     font-weight: 700;
-
 }
 .aboutus-section-list div p:nth-child(2){
     color: var(--azul-gris);
     font-weight: 500;
     line-height: 190%;
 }
-
 .team-section{
     display: flex;
     flex-direction: column;
@@ -165,6 +154,11 @@ button:hover{
     flex-direction: column;
     align-items: center;
     background-color: var(--gris);
+    transition: all 800ms;
+}
+.team-section-avatar div:hover{
+    border: 3px solid var(--rojo);
+    transform: scale(1.05);
 }
 .team-section-avatar div img{
     width: 6rem;
@@ -173,7 +167,7 @@ button:hover{
     transition: all 1000ms;
 }
 .team-section-avatar div img:hover{
-    width: 6.5rem;
+    transform: scale(1.05);
 }
 .team-section-avatar div span{
     font-weight: 700;
@@ -188,7 +182,7 @@ button:hover{
     line-height: 175%;
 }
 .team-section button{
-    margin-top: 4vh;
+    margin-top: 5vh;
 }
 .call-section{
     background-color: var(--rojo);
@@ -227,23 +221,24 @@ footer{
 .footer-logo-social{
     display: flex;
     align-items: center;
-    gap: 0.7vw;
+    gap: 0.9vw;
 }
-.footer-logo-social a img{
-    transition: width 1000ms, transform 1000ms,  position 1000ms, bottom 1000ms;
+.footer-logo-social a{
+    transition: all 1000ms;
 }
-.footer-logo-social a img:hover{
-    width: 130%;
-    transform: rotate(12deg);
+.footer-logo-social a:hover{
+    transform: rotate(12deg) scale(1.5);
     position: relative;
     bottom: 10px;
     filter: invert(39%) sepia(84%) saturate(888%) hue-rotate(336deg) brightness(100%) contrast(90%);
-
+}
+.footer-logo-social a img{
+    width: 130%;
 }
 footer nav{
     display: flex;
     flex-direction: row;
-    gap: 5vw;
+    gap: 14vw;
 }
 footer nav div{
     display: flex;
@@ -287,22 +282,27 @@ footer nav div a:hover{
     border-radius: 50px;
     color: var(--azul-gris);
     background-color: #ffffff;
+    margin-right: 0.5vw;
 }
 #input:focus{
     color: black;
 }
 
-@media (max-width:500px){
+/*MOBILE*/
+
+@media (max-width:425px){
     header nav{
         display: none;
     }
     header button{
         display: none;
     }
-    #img-mobile{
+    #mobile{
         display: flex;
     }
-
+    #no-mobile{
+        display: none;
+    }
     .land-section{
         flex-direction: column-reverse;
     }
@@ -313,12 +313,11 @@ footer nav div a:hover{
     }
     .aboutus-section{
         flex-direction: column;
-        margin: 4vh 1vw 15vh;
+        margin: 4vh 1vw 12vh;
     }
     .aboutus-section-description{
         text-align: center;
     }
-    
     .aboutus-section-list div:nth-child(2) p:nth-child(1){
         text-align: center;
         margin-left: -16px;
@@ -346,6 +345,7 @@ footer nav div a:hover{
         flex-direction: column;
         height: auto;
         padding-bottom: 3vh;
+        margin-top: 12vh;
     }
     .call-section h2{
         color: white;
@@ -370,14 +370,21 @@ footer nav div a:hover{
         align-items: flex-start;
         justify-content: center;
     }
-    footer span{
-        display: none;
-    }
     .footer-input{
         flex-direction: row;
     }
-    .footer-logo div{
+    .footer-logo{
+        flex-direction: column;
+    }
+    footer span{
+        color: var(--azul-gris);
+        font-size: 0.8rem;
+        order:3;
+    }
+    .footer-logo a{
         order: 1;
+    }
+    .footer-logo div{
         display: flex;
         gap: 7vw;
     }
@@ -385,13 +392,15 @@ footer nav div a:hover{
         width: 15rem;
     }
     .footer-logo div a img{
-        width: 2.1rem;
+        width: 2.5rem;
     }
     .footer-logo div a img:hover{
-        width:  2.1rem; ;
+        width:  2.5rem; ;
     }
     .footer-logo img{
         order: 2;
     }
+    #desktop-no{
+        display: flex;
+    }
 }
-    
