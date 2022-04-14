@@ -276,7 +276,7 @@ footer nav div a{
 /**MEDIA PARA HOVER**/
 @media (hover: hover) {
     header nav a:hover{
-        border-bottom: 2px solid var(--azul-oscuro);
+        border-bottom: 2px solid var(--rojo);
         font-size: 1.1rem;
         font-weight: 500;
     }
