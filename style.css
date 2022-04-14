@@ -107,6 +107,13 @@ button:hover{
     color: black;
     line-height: 160%;
 }
+.aboutus-section-list div{
+    transition: all 1000ms;
+}
+.aboutus-section-list div:hover{
+    background-color: var(--rojo-palido);
+    transform: scale(1.1);
+}
 .aboutus-section-list div::before{
     position: relative;
     top: 35px;
@@ -142,6 +149,12 @@ button:hover{
     flex-direction: column;
     align-items: center;
     margin: 5vh 1vw 0vh;
+}
+.team-section h2{
+    transition: all 200ms;
+}
+.team-section:hover h2{
+    border-bottom: 2.5px solid var(--rojo);
 }
 .team-section-avatar{
     display: flex;
@@ -180,6 +193,11 @@ button:hover{
     color: var(--azul-gris);
     font-weight: 500;
     line-height: 175%;
+    transition: all 1000ms;
+}
+.team-section-avatar div p:hover{
+    color: black;
+    
 }
 .team-section button{
     margin-top: 5vh;
@@ -276,6 +294,11 @@ footer nav div a:hover{
     border: none;
     border-radius: 50px;
 }
+.button:hover{
+    background-color: #ffffff;
+    color: var(--rojo);
+    font-weight: 700;
+}
 #input{
     padding: 15px 25px;
     border: none;
@@ -287,9 +310,7 @@ footer nav div a:hover{
 #input:focus{
     color: black;
 }
-
 /*MOBILE*/
-
 @media (max-width:425px){
     header nav{
         display: none;
