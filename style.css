@@ -275,6 +275,11 @@ footer nav div a{
 }
 /**MEDIA PARA HOVER**/
 @media (hover: hover) {
+    header nav a:hover{
+        border-bottom: 2px solid var(--azul-oscuro);
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
     button:hover{
         background-color: #ffffff;
         color: var(--rojo);
@@ -313,6 +318,7 @@ footer nav div a{
         bottom: 10px;
         filter: invert(39%) sepia(84%) saturate(888%) hue-rotate(336deg) brightness(100%) contrast(90%);
     }
+    
 }
 /**MOBILE**/
 @media (max-width:425px){
