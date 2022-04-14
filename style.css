@@ -32,6 +32,10 @@ h2{
     font-size: var(--h2);
     color: var(--azul);
 }
+#mobile{
+    display: none;
+}
+/**HEADER**/
 header{
     display: flex;
     justify-content: space-between;
@@ -46,11 +50,6 @@ header nav a{
     font-weight: 500;
     transition: all 500ms;
 }
-header nav a:hover{
-    border-bottom: 2px solid var(--azul-oscuro);
-    font-size: 1.1rem;
-    font-weight: 500;
-}
 button{
     background-color: var(--rojo);
     color: #ffffff;
@@ -60,15 +59,8 @@ button{
     border-radius: 50px;
     transition: all 1000ms;
 }
-button:hover{
-    background-color: #ffffff;
-    color: var(--rojo);
-    font-weight: 700;
-    border: 0.5px solid var(--rojo);
-}
-#mobile{
-    display: none;
-}
+
+/**LAND SECTION QUE DE LAND NO TIENE NADA PERO LAND SECTION PORQUE YO SOY EL DEVELOPER**/
 .land-section{
     display: flex;
     justify-content: space-between;
@@ -93,6 +85,7 @@ button:hover{
     margin-bottom: 3vh;
     font-size: var(--p);
 }
+/**ABOUT US SECTION**/
 .aboutus-section{
     display: flex;
     margin: 4vh 10vw 15vh;
@@ -109,10 +102,6 @@ button:hover{
 }
 .aboutus-section-list div{
     transition: all 1000ms;
-}
-.aboutus-section-list div:hover{
-    background-color: var(--rojo-palido);
-    transform: scale(1.1);
 }
 .aboutus-section-list div::before{
     position: relative;
@@ -144,6 +133,7 @@ button:hover{
     font-weight: 500;
     line-height: 190%;
 }
+/**TEAM SECTION**/
 .team-section{
     display: flex;
     flex-direction: column;
@@ -152,9 +142,6 @@ button:hover{
 }
 .team-section h2{
     transition: all 200ms;
-}
-.team-section:hover h2{
-    border-bottom: 2.5px solid var(--rojo);
 }
 .team-section-avatar{
     display: flex;
@@ -169,18 +156,11 @@ button:hover{
     background-color: var(--gris);
     transition: all 800ms;
 }
-.team-section-avatar div:hover{
-    border: 3px solid var(--rojo);
-    transform: scale(1.05);
-}
 .team-section-avatar div img{
     width: 6rem;
     position: relative;
     top: -5.5vh;
     transition: all 1000ms;
-}
-.team-section-avatar div img:hover{
-    transform: scale(1.05);
 }
 .team-section-avatar div span{
     font-weight: 700;
@@ -195,13 +175,10 @@ button:hover{
     line-height: 175%;
     transition: all 1000ms;
 }
-.team-section-avatar div p:hover{
-    color: black;
-    
-}
 .team-section button{
     margin-top: 5vh;
 }
+/**BANNER QUE LE PUSE CALL SECTION PORQUE SUPUSE QUE ERA UNA SECCION DE LLAMADO DE ATENCION COMO PARA QUE PRESIONEN PERO CUANDO EL PROFE DIJO QUE ERA UN BANNER LA VERDAD QUE SI, ES UN BANNER**/
 .call-section{
     background-color: var(--rojo);
     display: flex;
@@ -221,6 +198,7 @@ button:hover{
     color: var(--rojo);
     font-weight: 500;
 }
+/**FOOTER**/
 footer{
     background-color: var(--azul-oscuro);
     display: flex;
@@ -244,12 +222,6 @@ footer{
 .footer-logo-social a{
     transition: all 1000ms;
 }
-.footer-logo-social a:hover{
-    transform: rotate(12deg) scale(1.5);
-    position: relative;
-    bottom: 10px;
-    filter: invert(39%) sepia(84%) saturate(888%) hue-rotate(336deg) brightness(100%) contrast(90%);
-}
 .footer-logo-social a img{
     width: 130%;
 }
@@ -271,10 +243,6 @@ footer nav div a{
     font-size: 1rem;
     margin-bottom: 1vh;
 }
-footer nav div a:hover{
-    font-weight: 500;
-    color: var(--rojo);
-}
 .footer-div3{
     display: flex;
     flex-direction: column;
@@ -294,11 +262,6 @@ footer nav div a:hover{
     border: none;
     border-radius: 50px;
 }
-.button:hover{
-    background-color: #ffffff;
-    color: var(--rojo);
-    font-weight: 700;
-}
 #input{
     padding: 15px 25px;
     border: none;
@@ -310,7 +273,48 @@ footer nav div a:hover{
 #input:focus{
     color: black;
 }
-/*MOBILE*/
+/**MEDIA PARA HOVER**/
+@media (hover: hover) {
+    button:hover{
+        background-color: #ffffff;
+        color: var(--rojo);
+        font-weight: 700;
+        border: 0.5px solid var(--rojo);
+    }
+    .aboutus-section-list div:hover{
+        background-color: var(--rojo-palido);
+        transform: scale(1.1);
+    }
+    .team-section:hover h2{
+        border-bottom: 2.5px solid var(--rojo);
+    }
+    .team-section-avatar div:hover{
+        border: 3px solid var(--rojo);
+        transform: scale(1.05);
+    }
+    .team-section-avatar div:hover img{  
+        transform: scale(1.10);
+    }
+    .team-section-avatar div p:hover{
+        color: black;
+    }
+    footer nav div a:hover{
+        font-weight: 500;
+        color: var(--rojo);
+    }
+    .button:hover{
+        background-color: #ffffff;
+        color: var(--rojo);
+        font-weight: 700;
+    }
+    .footer-logo-social a:hover{
+        transform: rotate(12deg) scale(1.5);
+        position: relative;
+        bottom: 10px;
+        filter: invert(39%) sepia(84%) saturate(888%) hue-rotate(336deg) brightness(100%) contrast(90%);
+    }
+}
+/**MOBILE**/
 @media (max-width:425px){
     header nav{
         display: none;
@@ -425,3 +429,4 @@ footer nav div a:hover{
         display: flex;
     }
 }
+
